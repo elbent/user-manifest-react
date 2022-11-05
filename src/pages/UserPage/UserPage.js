@@ -18,7 +18,7 @@ const UserPage = () => {
         }
 
 
-    })
+    }, [params.id, user])
     
     return (
         (loading ? <h3>Loading...</h3> : 

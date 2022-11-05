@@ -15,7 +15,7 @@ const UsersPage = () => {
         }
 
 
-    });
+    }, [users]);
 
     return(
         <div className="container">
@@ -23,8 +23,8 @@ const UsersPage = () => {
             <div>
                 {
                     (loading ? <h3>Loading...</h3> : users.map(user =>
-                            <a key={user.id} href={`user/${user.id}`} className="grid-item"><p>{user.name}</p></a>
-                        ))
+                            <a key={user.id} href={`user/${user.id}`}><p>{user.name}</p></a>
+                    ))
                 }
             </div>
         </div>
